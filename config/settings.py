@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     
 
     # modules
+    "drf_spectacular",
     "django_filters",
     "rest_framework",
     "rest_framework_simplejwt",
@@ -136,7 +137,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Lagos'
 
 USE_I18N = True
 
@@ -186,10 +187,21 @@ REST_FRAMEWORK={
     ],
     "DEFAULT_PAGINATION_CLASS":
     "rest_framework.pagination.PageNumberPagination",
-    "PAGE_SIZE":2
+    "PAGE_SIZE":2,
+
+    "DEFAULT_SCHEMA_CLASS":
+    "drf_spectacular.openapi.AutoSchema",
 }
 
 
 SIMPLE_JWT={
     "ACCESS_TOKEN_LIFETIME":timedelta(days=2)
+}
+
+
+SPECTACULAR_SETTINGS={
+    "TITLE":"My Blog Api",
+    "DESCRIPTION":"Hayzed's blog api with features like posts and comments",
+    "VERSION":"1.0.0",
+    "COMPONENT_SPLIT_REQUEST":True
 }
