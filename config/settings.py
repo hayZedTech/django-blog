@@ -200,7 +200,7 @@ SIMPLE_JWT={
 
 
 SPECTACULAR_SETTINGS={
-    "TITLE":"My Blog Api",
+    "TITLE":"Hayzed Blog API Engine",
     "DESCRIPTION":"Hayzed's blog api with features like posts and comments",
     "VERSION":"1.0.0",
     "COMPONENT_SPLIT_REQUEST":True
